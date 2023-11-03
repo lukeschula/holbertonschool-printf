@@ -7,7 +7,7 @@
  *
  * Return: a pointer to a function housing the list of the argumants
  */
-int(*check_spec(const char, *format))(va_list)
+int(*check_spec(const char *format))(va_list)
 {
 	int a;
 	
