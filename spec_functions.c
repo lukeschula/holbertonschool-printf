@@ -7,7 +7,7 @@
  * @args: accesses the variable argument passed to main function
  */
 
-void print_char(va_list args)
+int print_char(va_list args)
 {
 	char character;
 
@@ -19,7 +19,7 @@ void print_char(va_list args)
  * print_pct - function that prints the % conversion specifier following a %
  */
 
-void print_pct(va_list args)
+int print_pct(va_list args)
 {
 	putchar('%');
 }
@@ -29,7 +29,7 @@ void print_pct(va_list args)
  * @args: variable argument passed to main function
  */
 
-void print_str(va_list args)
+int print_str(va_list args)
 {
 	char *string;
 
