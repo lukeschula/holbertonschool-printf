@@ -12,8 +12,8 @@ typedef struct form_spec
 } form_t;
 
 /* Function declarations used in main file */
-void print_char(va_list args);
-void print_pct(va_list args);
-void print_str(va_list args);
+int print_char(va_list args);
+int print_pct(va_list args);
+int print_str(va_list args);
 
 #endif

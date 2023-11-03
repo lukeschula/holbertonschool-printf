@@ -19,13 +19,13 @@ int(*check_spec(const char *format))(va_list)
 		{"i", print_dec},
 		{NULL, NULL}
 	};
-
-	for (a = 0; b[a].d; a++)
+	/* .type refers to format specifier string (c, s, %, etc.) */
+	for (a = 0; b[a].type; a++)
 	{
 		if (*format = *(b[a].type)
 		
 			return (b[a].f)
-		
+		/* .f refers to the corresponding function pointer to whatever print_ function to run */
 	}	
 	return (NULL);
 }
