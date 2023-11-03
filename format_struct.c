@@ -22,9 +22,9 @@ int(*check_spec(const char *format))(va_list)
 
 	for (a = 0; b[a].d; a++)
 	{
-		if (*format = *(b[a].d)
+		if (*format = *(b[a].type)
 		
-			return (b[a].e)
+			return (b[a].f)
 		
 	}	
 	return (NULL);
