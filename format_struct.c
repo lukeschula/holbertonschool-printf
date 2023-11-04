@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <string.h>
+#include "main.h"
 /**
  * check_spec - function pointer to test if specifiers are valid
  *
