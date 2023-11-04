@@ -26,14 +26,14 @@ int _printf(const char *format, ...)
 
 			if (print_func)
 			{
-				count += print_func(args);
-				
-				if (*format == '.') /* handles period after specifier */
+				if (*format == '.')
 				{
-					putchar(*format);
+					putchar(*format); /* handles period after specifier */
 					count++;
+					format++;
 				}
-				format++;
+
+				count += print_func(args);
 			}
 			else
 			{
