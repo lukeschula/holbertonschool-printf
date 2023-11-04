@@ -18,7 +18,7 @@ int (*check_spec(const char *format))(va_list)
 		{'c', print_char},
 		{'s', print_str},
 		{'%', print_pct},
-		{NULL, NULL}
+		{'\0', NULL}
 	};
 	/* .type refers to format specifier string (c, s, %, etc.) */
 	for (a = 0; b[a].type; a++)
