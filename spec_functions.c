@@ -21,7 +21,7 @@ int print_char(va_list args)
  * print_pct - function that prints the % conversion specifier following a %
  */
 
-int print_pct(void)
+int print_pct(va_list args)
 {
 	putchar('%');
 
