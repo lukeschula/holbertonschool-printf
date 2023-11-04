@@ -23,6 +23,7 @@ int print_char(va_list args)
 
 int print_pct(va_list args)
 {
+	(void)args; /* allows this to be included in structure array */
 	putchar('%');
 
 	return (1); /* one character is printed */
