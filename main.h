@@ -15,5 +15,6 @@ typedef struct form_spec
 int print_char(va_list args);
 int print_pct(va_list args);
 int print_str(va_list args);
+int (*check_spec(const char *format))(va_list);
 
 #endif

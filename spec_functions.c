@@ -13,6 +13,8 @@ int print_char(va_list args)
 
 	character = va_arg(args, int);
 	putchar(character);
+
+	return (1); /* one character is printed */
 }
 
 /**
@@ -22,6 +24,8 @@ int print_char(va_list args)
 int print_pct(va_list args)
 {
 	putchar('%');
+
+	return (1); /* one character is printed */
 }
 
 /**
@@ -31,6 +35,7 @@ int print_pct(va_list args)
 
 int print_str(va_list args)
 {
+	int count = 0;
 	char *string;
 
 	string = va_arg(args, char*);
@@ -38,6 +43,9 @@ int print_str(va_list args)
 	while (*string)
 	{
 		putchar(*string);
-		string++
+		string++;
+		count++; /* increment count for each character printed in string */
 	}
+
+	return (count); /* return number of characters printed */
 }
