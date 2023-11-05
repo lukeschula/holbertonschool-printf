@@ -15,10 +15,12 @@ int (*check_spec(const char *format))(va_list)
 	int a;
 	
 	form_t b[] = {
-		{'c', print_char},
-		{'s', print_str},
-		{'%', print_pct},
-		{'\0', NULL}
+		{"c", print_char},
+		{"s", print_str},
+		{"%", print_pct},
+		{"d", print_dec},
+		{"i", print_dec},
+		{"\0", NULL}
 	};
 	/* .type refers to format specifier string (c, s, %, etc.) */
 	for (a = 0; b[a].type; a++)

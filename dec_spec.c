@@ -21,7 +21,7 @@ int print_dec(va_list args)
 	{
 		c = c + putchar('-');
 		a = x * -1;
-	}			/* if x is negative, print a minus sign and set b to the absolute value x */
+	}			/* if x is negative, print a minus sign and set a to the absolute value x */
 	
 	a = x;
 
@@ -31,7 +31,7 @@ int print_dec(va_list args)
 	{
 		b = b / 10;
 		count = count * 10;
-	} 				/* calculates the # of digits in a by repeatdly dividing a by 10 until a is less than 10, 
+	} 				/* calculates the # of digits in a by repeatdly dividing b by 10 until b is less than 10, 
 					   count is used to track the number of digits*/ 
 	while (count >= 1)
 	{
