@@ -14,8 +14,8 @@ int print_dec(va_list args)
 
 	x = va_arg(args, int); /* retrieving 'arg' and assigning the value to x */
 
-	if (x > 0)
-		return (NULL);
+	if (x == NULL)
+		return (-1);
 	if (x < 0) 
 	{
 		c = c + putchar('-');
