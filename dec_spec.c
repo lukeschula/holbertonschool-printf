@@ -26,5 +26,20 @@ int print_dec(va_list args)
 
 	b = a;
 
+	while (a > 9)
+	{
+		a = a / 10;
+		count = count * 10;
+	} 				/* calculates the # of digits in a by repeatdly dividing a by 10 until a is less than 10, 
+					   count is used to track the number of digits*/ 
+	while (count >= 1)
+	{
+		c = c + putchar(((a / count) % 10) + '0');
+		count = count / 10;
+	}				/* prints each digit of a 1 by 1, from left to right
+					   reduces count by a factor of 10 to move to the next digit*/
+	return (c);			
 
+					/* returns the length of the printed number stored in c*/
+}
 	
