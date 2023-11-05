@@ -2,7 +2,7 @@
 /**
  * print_dec - identifies i and d specifiers and returns 
  *
- * @args: the argument passed through the passed through logic 
+ * @args: the argument passed through the logic 
  *
  * Return: the length of the printed number
  */
@@ -16,19 +16,20 @@ int print_dec(va_list args)
 
 	if (x == NULL)
 		return (-1);
+
 	if (x < 0) 
 	{
 		c = c + putchar('-');
-		a = x  * -1;
+		a = x * -1;
 	}			/* if x is negative, print a minus sign and set b to the absolute value x */
 	
 	a = x;
 
 	b = a;
 
-	while (a > 9)
+	while (b > 9)
 	{
-		a = a / 10;
+		b = b / 10;
 		count = count * 10;
 	} 				/* calculates the # of digits in a by repeatdly dividing a by 10 until a is less than 10, 
 					   count is used to track the number of digits*/ 
