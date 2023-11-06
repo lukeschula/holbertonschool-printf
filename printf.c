@@ -63,6 +63,7 @@ int _printf(const char *format, ...)
 						    *handles case where character following % is unrecognized
 						    */
 				count++;
+				}
 			}
 		}
 		else
