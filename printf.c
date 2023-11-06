@@ -48,14 +48,14 @@ int _printf(const char *format, ...)
 					format++;
 				}
 
-				if (print_func == print_string)
+				if (print_func == print_str)
 				{
 					char* str = va_arg(args, char*); /* retrieve string using va_arg */
 					if (str == NULL)
 					{
 						str = "(null)"; /* if str is NULL, assign "null" to str variable */
 					}
-					count += print_string(str);
+					count += print_str(str);
 				}
 
 				count += print_func(args);
