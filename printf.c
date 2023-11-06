@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int count = 0;
 	int (*print_func)(va_list);
-	
+
 	va_start(args, format);
 	
 	if (format == NULL)
