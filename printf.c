@@ -17,9 +17,11 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL) /**checks both for non-existent format string and when format string points to empty string*/
+	if (format == NULL || *format == '\0') /**
+						 *checks both for non-existent format string and when format string points to empty string
+						 */
 	{
-		return (-1);
+		return (0);
 	}
 
 	while (*format != '\0')
@@ -30,7 +32,7 @@ int _printf(const char *format, ...)
 
 			if (*format == '\0')
 			{
-				return (-1); /* return 0 if '%' is last character in format string */
+				return (0); /* return 0 if '%' is last character in format string */
 			}
 
 			print_func = check_spec(format); /**
@@ -39,28 +41,34 @@ int _printf(const char *format, ...)
 
 			if (print_func)
 			{
-				int result = print_func(args);
-				if (result < 0)
+				if (*format == '.')
 				{
-					return (-1);
+					putchar(*format); /* handles period after specifier */
+					count++;
+					format++;
 				}
 
-				count += result;
-			}	
+				count += print_func(args);
+			}
 			else
 			{
 				putchar('%'); /* print % character because no valid specifier found */
-				putchar(*format);
-				count += 2;
-			}
-				
-			if (putchar(*format) == EOF)
-			{
-				return (-1);
-			}	
 				count++;
-		
-		
+				
+				if (*format != '%')
+				{
+				putchar(*format); /**
+						    *handles case where character following % is unrecognized
+						    */
+				count++;
+				}
+			}
+		}
+		else
+		{
+			putchar(*format);
+			count++;
+		}
 
 		format++;
 	}
@@ -68,5 +76,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (count);
-	}
 }
