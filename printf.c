@@ -54,7 +54,8 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				/* putchar('%'); print % character because no valid specifier found */
+				putchar('%'); /* print % character because no valid specifier found */
+				count++;
 				putchar(*format); /**
 						    *handles case where character following % is unrecognized
 						    */
