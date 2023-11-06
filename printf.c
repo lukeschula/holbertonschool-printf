@@ -17,9 +17,11 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	if (format == NULL)
+	if (format == NULL || *format == '\0') /**
+						 *checks both for non-existent format string and when format string points to empty string
+						 */
 	{
-		return (0); /* returns 0 if format string is NULL (not provided) */
+		return (0);
 	}
 
 	while (*format != '\0')
