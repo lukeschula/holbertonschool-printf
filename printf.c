@@ -56,6 +56,9 @@ int _printf(const char *format, ...)
 			{
 				putchar('%'); /* print % character because no valid specifier found */
 				count++;
+				
+				if (*format != '%')
+				{
 				putchar(*format); /**
 						    *handles case where character following % is unrecognized
 						    */
