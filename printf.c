@@ -7,6 +7,7 @@
  * @... - variable number of arguments that replace the format specifiers in the format string
  *
  * Return: Will return the number of characters printed
+ * Return: 0 when null
  */
 int _printf(const char *format, ...)
 {
@@ -16,13 +17,11 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	
-	if (format == NULL)
+	if (format != NULL) /* return 0 if format string is NULL */
 	
-		return (-1);
-	
-	while (*format)
+	while (*format != '\0')
 	{
-		if (*format == '%')
+		if (*format == '%') /* prevents seg fault if % is last character of string */
 		{
 			format++;
 
