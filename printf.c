@@ -32,9 +32,11 @@ int _printf(const char *format, ...)
 
 			if (*format == '\0')
 			{
-				putchar('%'); /* print '%' if it is last character on format string */
+				return (0);
+				/**
+				 * putchar('%'); * print '%' if it is last character on format string *
 				count++;
-				break; /* break loop if null terminator is encountered after '%' */
+				break; * break loop if null terminator is encountered after '%' */
 			}
 
 			print_func = check_spec(format); /**
