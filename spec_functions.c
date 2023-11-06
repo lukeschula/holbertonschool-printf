@@ -5,6 +5,8 @@
 /**
  * print_char - function that will print a character following a %c
  * @args: accesses the variable argument passed to main function
+ *
+ * Return: 1 to indicate that one character has been printed
  */
 
 int print_char(va_list args)
@@ -19,7 +21,9 @@ int print_char(va_list args)
 
 /**
  * print_pct - function that prints the % conversion specifier following a %
- */
+ * @args: voided because print_pct does not receive a variable argument
+ *
+ * Return: 1 to indicate that percent sign has been printed */
 
 int print_pct(va_list args)
 {
@@ -32,6 +36,8 @@ int print_pct(va_list args)
 /**
  * print_str - function that will print the inputted string following a %s
  * @args: variable argument passed to main function
+ *
+ * Return: Returns 'count' which holds number of characters printed in string
  */
 
 int print_str(va_list args)
