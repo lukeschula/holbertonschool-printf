@@ -23,7 +23,8 @@ int print_char(va_list args)
  * print_pct - function that prints the % conversion specifier following a %
  * @args: voided because print_pct does not receive a variable argument
  *
- * Return: 1 to indicate that percent sign has been printed */
+ * Return: 1 to indicate that percent sign has been printed
+ */
 
 int print_pct(va_list args)
 {
