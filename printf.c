@@ -24,10 +24,14 @@ int _printf(const char *format, ...)
 	
 	while (*format != '\0')
 	{
-
 		if (*format == '%') /* prevents seg fault if % is last character of string */
 		{
 			format++;
+
+			if (*format == '\0')
+			{
+				break; /* break loop if null terminator is encountered after '%' */
+			}
 
 			print_func = check_spec(format); /* calls check_spec to check conversion specifier */
 
