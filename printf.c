@@ -26,17 +26,13 @@ int _printf(const char *format, ...)
 
 	while (*format != '\0')
 	{
-		if (*format == '%') /* prevents seg fault if % is last character of string */
+		if (*format == '%') 
 		{
 			format++;
 
 			if (*format == '\0')
 			{
-				return (0);
-				/**
-				 * putchar('%'); * print '%' if it is last character on format string *
-				count++;
-				break; * break loop if null terminator is encountered after '%' */
+				return (0); /* return 0 if '%' is last character in format string */
 			}
 
 			print_func = check_spec(format); /**
