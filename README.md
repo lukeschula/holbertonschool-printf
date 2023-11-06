@@ -5,7 +5,8 @@ Welcome to the my repository! In here contains a project recreating the printf f
 
 ## Project Requirements
 - List of potential topics to list 
-  - Compiler used to test code: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+  - Compiler used to test code:
+    - ![alt text](compiler image.jpg)
   - Authorized functions and macros
     - write (man 2 write)
     - malloc (man 3 malloc)
