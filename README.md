@@ -6,7 +6,7 @@ Welcome to the my repository! In here contains a project recreating the printf f
 ## Project Requirements
 - List of potential topics to list 
   - Compiler used to test code:
-    - ![alt text](compiler image.jpg)
+    - ![compiler used for priject](/finder/downloads/compiler image.jpg "compiler image")
   - Authorized functions and macros
     - write (man 2 write)
     - malloc (man 3 malloc)
