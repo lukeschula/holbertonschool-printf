@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int count = 0;
-	int (*print_func)(va_list); 
+	int (*print_func)(va_list);
 
 	va_start(args, format);
 
@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 	{
 		return (0); /* returns 0 if format string is NULL (not provided) */
 	}
-	
+
 	while (*format != '\0')
 	{
 		if (*format == '%') /* prevents seg fault if % is last character of string */
