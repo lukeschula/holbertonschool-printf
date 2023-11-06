@@ -6,7 +6,8 @@
  * @format: a pointer to a character (format) string
  * @... - variable number of arguments that replace specifiers in format string
  *
- * Return: Will return the number of characters printed, 0 when format string not provided
+ * Return: Will return the number of characters printed
+ * 0 when format string not provided
  */
 int _printf(const char *format, ...)
 {
@@ -15,7 +16,7 @@ int _printf(const char *format, ...)
 	int (*print_func)(va_list);
 
 	va_start(args, format);
-	
+
 	if (format == NULL)
 	{
 		return (0); /* returns 0 if format string is NULL (not provided) */
