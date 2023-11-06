@@ -30,6 +30,8 @@ int _printf(const char *format, ...)
 
 			if (*format == '\0')
 			{
+				putchar('%'); /* print '%' if it is last character on format string */
+				count++;
 				break; /* break loop if null terminator is encountered after '%' */
 			}
 
