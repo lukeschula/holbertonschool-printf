@@ -16,11 +16,19 @@ int _printf(const char *format, ...)
 	int (*print_func)(va_list); 
 
 	va_start(args, format);
-	
-	if (format != NULL) /* return 0 if format string is NULL */
+
+	if (format == NULL)
+	{
+		return (0); /* returns 0 if format string is NULL (not provided) */
+	}
 	
 	while (*format != '\0')
 	{
+		if (*format == NULL) /* NULL check inside loop in case specifier not reocognized */ 
+		{
+			break;
+		}
+
 		if (*format == '%') /* prevents seg fault if % is last character of string */
 		{
 			format++;
@@ -57,5 +65,3 @@ int _printf(const char *format, ...)
 
 	return (count);
 }
-
-
