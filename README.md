@@ -28,6 +28,19 @@ Welcome to the my repository! In here contains a project recreating the printf f
 ## Context to project
  
 ### File Description
-
+  - main.h
+    - 
+  - format_struct.c
+    -
+  - printf.c
+    -
+  - spec_functions.c
+    -
+  - putchar.c
+    -
+  - dec_spec.c
+    -
+  - man_3_printf
+    -
 #### Function Library
   
