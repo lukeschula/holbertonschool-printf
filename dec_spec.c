@@ -34,11 +34,10 @@ int print_dec(va_list args)
 	}
 	while (count >= 1)
 	{
-		c = c + putchar(((a / count) % 10) + '0'); /* prints each digit of a 1 by 1 from left to right */
+		putchar(((a / count) % 10) + '0'); /* prints each digit of a 1 by 1 from left to right */
 		count = count / 10; /* reduces count by a factor of 10 to move to next digit */
+		c++; /*increment count for each character printed */
 	}
-
-	putchar('\n');
 	
 	return (c); /* returns the length of the printed number stored in c*/
 }
