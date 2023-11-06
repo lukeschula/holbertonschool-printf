@@ -24,10 +24,6 @@ int _printf(const char *format, ...)
 	
 	while (*format != '\0')
 	{
-		if (*format == NULL) /* NULL check inside loop in case specifier not reocognized */ 
-		{
-			break;
-		}
 
 		if (*format == '%') /* prevents seg fault if % is last character of string */
 		{
@@ -49,6 +45,8 @@ int _printf(const char *format, ...)
 			else
 			{
 				putchar('%'); /* print % character because no valid specifier found */
+				count++;
+				putchar(*format); /* handles case where character following % is unreocgnized */
 				count++;
 			}
 		}
