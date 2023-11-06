@@ -29,7 +29,7 @@ int print_dec(va_list args)
 	while (b > 9)
 	{
 		b = b / 10; /*finds # of digits in 'a' by dividing b by 10 until < 10 */
-		count++; /* increment count for each digit */
+		count = count * 10; /* for each digit removed from b we increase the value of a by 10 */
 	}
 	while (count > 0)
 	{
