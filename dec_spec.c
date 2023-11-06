@@ -11,6 +11,7 @@ int print_dec(va_list args)
 	int x;
 	unsigned int a, b;
 	unsigned int count = 1;
+	int length = 0;
 
 	x = va_arg(args, int); /* retrieving 'arg' and assigning the value to x */
 
@@ -18,6 +19,7 @@ int print_dec(va_list args)
 	{
 		putchar('-');
 		a = -x;
+		length++;
 	}			/* if x is negative, print a minus sign and set a to the absolute value x */
 	else
 	{
@@ -34,8 +36,9 @@ int print_dec(va_list args)
 	while (count > 0)
 	{
 		putchar((a / count) % 10 + '0'); /* prints each digit of a 1 by 1 from left to right */
-		count = count / 10; /* reduces count by a factor of 10 to move to next digit */
+		count = count / 10; /*reduces count by factor of 10 to move to next digit */
+		length++;
 	}
 	
-	return (count); /* returns the count of digits */
+	return (length); /* returns the count of digits */
 }
