@@ -5,7 +5,7 @@
 /**
  * check_spec - function pointer to test if specifiers are valid
  *
- * @format: pointer to the character, this charatcer will then be tested 
+ * @format: pointer to the character, this charatcer will then be tested
  * if is a valid specifier or not
  *
  * Return: a pointer to a function housing the list of the argumants
@@ -13,7 +13,7 @@
 int (*check_spec(const char *format))(va_list)
 {
 	int a;
-	
+
 	form_t b[] = {
 		{'c', print_char},
 		{'s', print_str},
@@ -29,7 +29,7 @@ int (*check_spec(const char *format))(va_list)
 
 			return (b[a].f);
 		/* .f points to the appropriate print function */
-	}	
+	}
 
 	return (NULL);
 }

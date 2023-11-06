@@ -2,12 +2,11 @@
 #include <stdarg.h>
 #include "main.h"
 /**
- * _printf - will replicate printf by producing output according to format string
- * @format: a pointer to a character (format) string and specifies how output should be formatted
- * @... - variable number of arguments that replace the format specifiers in the format string
+ * _printf - replicates printf by producing output according to format string
+ * @format: a pointer to a character (format) string
+ * @... - variable number of arguments that replace specifiers in format string
  *
- * Return: Will return the number of characters printed
- * Return: 0 when null
+ * Return: Will return the number of characters printed, 0 when format string not provided
  */
 int _printf(const char *format, ...)
 {
@@ -16,7 +15,7 @@ int _printf(const char *format, ...)
 	int (*print_func)(va_list);
 
 	va_start(args, format);
-
+	
 	if (format == NULL)
 	{
 		return (0); /* returns 0 if format string is NULL (not provided) */
@@ -35,7 +34,9 @@ int _printf(const char *format, ...)
 				break; /* break loop if null terminator is encountered after '%' */
 			}
 
-			print_func = check_spec(format); /* calls check_spec to check conversion specifier */
+			print_func = check_spec(format); /**
+							   *calls check_spec to check conversion specifier
+							   */
 
 			if (print_func)
 			{
@@ -52,7 +53,9 @@ int _printf(const char *format, ...)
 			{
 				putchar('%'); /* print % character because no valid specifier found */
 				count++;
-				putchar(*format); /* handles case where character following % is unreocgnized */
+				putchar(*format); /**
+						    *handles case where character following % is unreocgnized
+						    */
 				count++;
 			}
 		}
