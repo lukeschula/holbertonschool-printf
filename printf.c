@@ -16,7 +16,7 @@ int _printf(const char *format, ...)
 	int (*print_func)(va_list);
 
 	va_start(args, format);
-
+	
 	if (format == NULL || *format == '\0') /**
 						 *checks both for non-existent format string and when format string points to empty string
 						 */
@@ -76,4 +76,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (count);
-}
+}	
