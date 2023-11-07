@@ -17,7 +17,7 @@ int print_dec(va_list args)
 	if (x < 0)
 	{
 		putchar('-');
-		a = -x; /**if x is negative, print a minus sign sets 'a' to absolute value of 'x'*/
+		a = -x; /**if x is '-', print a minus sign sets 'a' to absolute value of 'x'*/
 		length++; /* increment length to account for minus sign */
 	}
 	else
@@ -29,7 +29,8 @@ int print_dec(va_list args)
 
 	while (b > 9)
 	{
-		b = b / 10; /**finds # of digits in 'a' by dividing b by 10 until < 10*/
+		b = b / 10; /**finds # of digits in 'a' 
+			      *by dividing b by 10 until < 10*/
 		count = count * 10; /**for each digit removed from b we increase the value of count by 10*/
 	}
 	while (count > 0)
