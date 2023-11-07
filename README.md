@@ -35,9 +35,11 @@ Welcome to the my repository! In here contains a project recreating the printf f
     - This file defines a function named check_spec that checks if a given character is a valid format specifier for a custom printf-like function.
     - The function takes a pointer to a character (which is expected to be a format specifier like 'c', 's', '%', 'd', or 'i') and returns a function pointer to the appropriate function for handling that specifier.
   - printf.c
-    -
+    - This file defines a function named _printf that is a simplified version of the standard printf function.
+    - The function takes a format string and a variable number of arguments, and it prints the arguments according to the format string. The function then  returns the number of characters printed. 
   - spec_functions.c
-    -
+    - This file holds three functions; print_char, print_pct, and print_str.
+    - These functions are used in conjunction with the _printf function to handle specific format specifiers ('c', 's', & '%').
   - putchar.c
     -
   - dec_spec.c
