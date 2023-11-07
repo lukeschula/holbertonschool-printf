@@ -48,10 +48,14 @@ Welcome to the my repository! In here contains a project recreating the printf f
     - This function is to print a decimal integer and return the length of the printed number.
   - man_3_printf
     - Manual with additional information of the functions and their intended purpose for this project.
-#### Prototype Library
-  - int (*check_spec(const char *format))(va_list):
-  - int _printf(const char *format, ...):
-  - int print_char(va_list args):
-  - int print_pct(va_list args):
-  - int print_str(va_list args):
-  - int print_dec(va_list args): 
+#### Code Breakdown
+  - main.h:
+    1. Declares an array called 'b' of 'form_t' structures.
+    1. Function loops over the array. Each structure in the array checks for 'type' member matches the character pointed by '*format'.
+    1. If a match is found, it returns the 'f' member of the structure. 
+    1. If it doesnt match, return 'NULL'.
+  - 
+  - 
+  - 
+  - 
+  - 
