@@ -48,5 +48,10 @@ Welcome to the my repository! In here contains a project recreating the printf f
     - This function is to print a decimal integer and return the length of the printed number.
   - man_3_printf
     - Manual with additional information of the functions and their intended purpose for this project.
-#### Function Library
-  
+#### Prototype Library
+ - int (*check_spec(const char *format))(va_list);
+ - int _printf(const char *format, ...):
+ - int print_char(va_list args);
+ - int print_pct(va_list args);
+ - int print_str(va_list args);
+ - int print_dec(va_list args); 
