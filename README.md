@@ -49,7 +49,7 @@ Welcome to the my repository! In here contains a project recreating the printf f
   - man_3_printf
     - Manual with additional information of the functions and their intended purpose for this project.
 #### Code Breakdown
-  - format_struct.c:
+  - format_struct.c
     1. Declares an array called 'b' of 'form_t' structures.
     1. Function loops over the array. Each structure in the array checks for 'type' member matches the character pointed by '*format'.
     1. If a match is found, it returns the 'f' member of the structure. 
@@ -67,5 +67,14 @@ Welcome to the my repository! In here contains a project recreating the printf f
     1. Calls va_end to clean up 'args'.
     1. Returns 'count', which is the total number of characters printed.
   - spec_functions.c
+    1. print_char: This function is called when the format specifier is '%c'. It takes a variable argument list (va_list) as input and retrieves the next argument of type 'int' from the list. It then prints the character corresponding to that argument using 'putcha'r. The function returns 1 to indicate that one character has been printed.
+    1. print_pct: This function is called when the format specifier is '%%'. It takes a va_list as input, but it doesn't use it. It simply prints the '%' character using 'putchar' and returns 1 to indicate that one character has been printed.
+    1. print_str: This function is called when the format specifier is '%s'. It takes a va_list as input and retrieves the next argument of type 'char*' from the list. It then iterates over the characters in the string and prints each character using 'putchar'. It keeps track of the number of characters printed in the 'count' variable and returns that count.
   - dec_spec.c 
-   
+    1. Inside the function, it retrieves the next argument of type 'int' from the va_list using the va_arg macro and assigns it to the variable 'x'.
+    1. The function checks if 'x' is negative. If it is, it prints a minus sign (-) and assigns the absolute value of 'x' to the variable 'a'. It also increments the length variable by 1 to account for the minus sign.
+    1. If 'x' is not negative, it assigns the value of 'x' to 'a' without any modifications.
+    1. The function then initializes the variable 'b' with the value of 'a'. This variable will be used to determine the number of digits in 'a'.
+    1. The function enters a loop that divides 'b' by 10 until 'b' becomes less than 10. This loop counts the number of digits in 'a' and updates the 'count' variable accordingly. For each digit removed from 'b', the value of 'count' is multiplied by 10.
+    1. The function enters another loop that prints each digit of 'a'. It does this by dividing 'a' by 'count', taking the remainder, and adding the ASCII value of '0' to convert the digit to its corresponding character. It then prints the character using 'putchar'. The 'count' variable is divided by 10 in each iteration to move to the next digit. The function also increments the 'length' variable for each digit printed.
+    1. Returns the value of length, which represents the total length of the printed output.
