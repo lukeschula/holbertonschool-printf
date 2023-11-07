@@ -81,4 +81,4 @@ Welcome to the my repository! In here contains a project recreating the printf f
 ##### Authors
 Luke Schula Cohort 22 Holoberton Tulsa 10/2023
 ***
-Ryan Donaldson Cohort 22 Holberton School 10/2023
+Ryan Donaldson Cohort 22 Holberton School Tulsa 10/2023
