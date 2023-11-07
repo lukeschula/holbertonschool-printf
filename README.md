@@ -29,9 +29,11 @@ Welcome to the my repository! In here contains a project recreating the printf f
  
 ### File Description
   - main.h
-    - 
+    - The header file, used to declare function prototypes, macros, and data types that will be used across multiple source files.
+    - Provides a common set of declarations that can be used by all source files in the project. 
   - format_struct.c
-    -
+    - This file defines a function named check_spec that checks if a given character is a valid format specifier for a custom printf-like function.
+    - The function takes a pointer to a character (which is expected to be a format specifier like 'c', 's', '%', 'd', or 'i') and returns a function pointer to the appropriate function for handling that specifier.
   - printf.c
     -
   - spec_functions.c
