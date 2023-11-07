@@ -66,5 +66,6 @@ Welcome to the my repository! In here contains a project recreating the printf f
     1. Increments the format pointer to move to the next character.
     1. Calls va_end to clean up 'args'.
     1. Returns 'count', which is the total number of characters printed.
-  - 
+  - spec_functions.c
+  - dec_spec.c 
    
