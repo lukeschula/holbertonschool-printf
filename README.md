@@ -41,10 +41,12 @@ Welcome to the my repository! In here contains a project recreating the printf f
     - This file holds three functions; print_char, print_pct, and print_str.
     - These functions are used in conjunction with the _printf function to handle specific format specifiers ('c', 's', & '%').
   - putchar.c
-    -
+    - This file houses a simple _putchar function that writes a character to the standard output (stdout).
+    - The function takes a character c as input and uses the write system call to write that character to the file descriptor 1, which represents the standard output.
   - dec_spec.c
-    -
+    - This file  defines a function named print_dec that is used to handle the '%d' and '%i' format specifiers.
+    - This function is to print a decimal integer and return the length of the printed number.
   - man_3_printf
-    -
+    - Manual with additional information of the functions and their intended purpose for this project.
 #### Function Library
   
