@@ -78,3 +78,4 @@ Welcome to the my repository! In here contains a project recreating the printf f
     1. The function enters a loop that divides 'b' by 10 until 'b' becomes less than 10. This loop counts the number of digits in 'a' and updates the 'count' variable accordingly. For each digit removed from 'b', the value of 'count' is multiplied by 10.
     1. The function enters another loop that prints each digit of 'a'. It does this by dividing 'a' by 'count', taking the remainder, and adding the ASCII value of '0' to convert the digit to its corresponding character. It then prints the character using 'putchar'. The 'count' variable is divided by 10 in each iteration to move to the next digit. The function also increments the 'length' variable for each digit printed.
     1. Returns the value of length, which represents the total length of the printed output.
+##### Authors
