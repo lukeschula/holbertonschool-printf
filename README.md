@@ -49,13 +49,22 @@ Welcome to the my repository! In here contains a project recreating the printf f
   - man_3_printf
     - Manual with additional information of the functions and their intended purpose for this project.
 #### Code Breakdown
-  - main.h:
+  - format_struct.c:
     1. Declares an array called 'b' of 'form_t' structures.
     1. Function loops over the array. Each structure in the array checks for 'type' member matches the character pointed by '*format'.
     1. If a match is found, it returns the 'f' member of the structure. 
     1. If it doesnt match, return 'NULL'.
+  - printf.c
+    1. Intailizes a va_list named 'args'
+    1. Checks if format string is NULL, return 0 if so.
+    1. It then enters a loop that continues until it reaches the end of the format string. Checks if the current character is a % character.
+    1. If it finds a % character, it increments the format pointer to get to the format specifier. Then checks if the format specifier is a '\0' character, which would mean that the format string ends with a % character. If it does, the function returns 0.
+    1. Calls the 'check_spec' function to get a function pointer to the function that handles the format specifier. The 'check_spec' function is expected to return 'NULL' if the format specifier is not recognized.
+    1. If 'check_spec' returns a non-NULL function pointer, it checks if the format specifier is a '.' character. If it is, it prints the '.' character and increments the count and the format pointer. It then calls the function pointed to by 'print_func' with args as the argument and adds the return value to 'count'.
+    1. If 'check_spec' returns 'NULL', it prints a '%' character and the unrecognized format specifier, and increments count by 2.
+    1. If the current character is not a '%' character, it prints the character and increments 'count'.
+    1. Increments the format pointer to move to the next character.
+    1. Calls va_end to clean up 'args'.
+    1. Returns 'count', which is the total number of characters printed.
   - 
-  - 
-  - 
-  - 
-  - 
+   
