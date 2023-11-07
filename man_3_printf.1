@@ -1,0 +1,115 @@
+.TH "06 Nov 2023" "1.0" "_printf man page"
+.SH NAME
+_printf \- custom printf function
+.SH SYNOPSIS
+.B int _printf
+(const char *format, ...)
+.SH DESCRIPTION
+_printf intends to replicate the standard \fIprintf\fP function in C. It formats and prints text to standard output. In the same way as \fI printf \fR, this version of _printf accepts a format string as its first argument followed by optional variadic arguments.
+
+The format string can include placeholders, known as \fI format specifiers \fR, that are replaced by the corresponding values of the additional variadic arguments. These specifiers allow for the formatting of various data types, including integers, decimals, characters and strings.
+
+In its use, _printf calls on the \fI check_spec \fR function that checks the character following the '%' in the format string. It then determines the appropriate function to call for printing using a character array 'b' of form_t structures. Each structure contains a character type representing a format specifier and a function pointer 'f' to the corresponding print function.
+
+If \fI check_spec \fR finds a match between the structure type and the format character, it returns the corresponding function pointer which is called in _printf to print the character, string, or integer. If it does not find a match, it returns NULL.  
+.SH OPTIONS
+The options for _printf depend on the format string provided. This version of _printf supports the following format specifiers:
+.P
+.SS %d
+.HP
+-Data Type: Integer
+.P
+-Description: Prints an integer value
+.P
+-Example: \f(CW_printf("The value is %d", 35);\fR
+.P
+.SS %i
+.HP
+-Data Type: Integer
+.P
+-Description: Prints an integer value
+.P
+-Example: \f(CW_printf("The value is %i", 22);\fR
+.P
+.SS %c
+.HP
+-Data Type: Character
+.P
+-Description: Prints a single character
+.P
+-Example: \f(CW_printf("%c know the answer", I);\fR
+.P
+.SS %s
+.HP
+-Data Type: String
+.P
+-Description: Prints a string of characters
+.P
+-Example: \f(CW_printf("My dog Lucy is a %s", "good girl");\fR
+.P
+.SH Return Value
+_printf will return the number of characters printed. This is stored in the \fI count \fR variable which is incremented each time a character is printed. 
+.P
+If the format string is NULL or an empty string, the function returns '0'. It will also return '0' if the format string ends in a '%' character. 
+.SH Errors
+The function was not written to deliver specific error messages. However, as mentioned above, there are some error conditions that might occur.
+.HP
+-\fB\fI Null Format String \fR
+.P
+If the format string is NULL or empty, the function returns '0'.
+.P
+-\fB\fI Unfinished Format Specifier \fR
+.P
+If the format string ends with a '%' character, the function returns '0'.
+.P
+-\fB\fI Invalid Format Specifier \fR
+.P
+If a '%' character is followed by an invalid format specifier, the function prints the '%' character and the unrecognized character as they are.
+.SH Examples
+This will provide a few examples of how the _printf function operates based on the format specifiers that it supports:
+.P 
+.SS %c Format Operator
+.P
+.nf
+\f(CW
+int main()
+{
+char ch = 'Z';
+_printf("The character is %c", ch);
+return (0);
+}
+\fB\fI Output \fR - The character is Z
+\fR
+.fi
+
+.SS %s Format Operator
+.P
+.nf
+\f(CW
+int main()
+{
+char *str = "test string";
+_printf("This is a %s, str);
+return (0);
+}
+\fB\fI Output \fR - This is a test string
+\fR
+.fi
+
+.SS %d / %i Format Operator
+.P
+.nf
+\f(CW
+int main()
+{
+int num = 42;
+_printf("The secret of life is %d, num);
+return (0);
+}
+\fB\fI Output \fR - The secret of life is 42
+\fR
+.fi
+
+.SH Author(s)
+.P
+The _printf function was co-authored by Ryan Donaldson and Luke Schula.
