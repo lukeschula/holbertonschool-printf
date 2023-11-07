@@ -80,3 +80,5 @@ Welcome to the my repository! In here contains a project recreating the printf f
     1. Returns the value of length, which represents the total length of the printed output.
 ##### Authors
 Luke Schula Cohort 22 Holberton Tulsa 10/2023
+***
+Ryan Donaldson Cohort 22 Holberton School 10/2023
