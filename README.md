@@ -24,6 +24,10 @@ Welcome to the my repository! In here contains a project recreating the printf f
   - All your header files should be include guarded.
   - Note that we will not provide the _putchar function for this project.
 
+## Project Screenshots
+![Example 1](../images/Radius1.png)
+![Example 2](../images/Radius2.png)
+
 
 ## Context to project
  
