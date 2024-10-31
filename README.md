@@ -1,11 +1,6 @@
-<div align="center">
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
-  <h1>Awesome Readme Template</h1>
+  <h1>Printf The Long Way</h1>
 
-  <p>
-    An awesome README template for your projects!
-  </p>
 
 
 <!-- Badges -->
@@ -48,7 +43,8 @@
 Welcome to the my repository! In here contains a project recreating the printf function without case or switch statements.This project was done trimester 1 at Holberton School Tulsa, and the project was written using the C programming language.
 
 ## Connect With Us
-<a href=”https://www.linkedin.com/in/luke-schula-480548169/"><img align=”left” src=”https://raw.githubusercontent.com/username/reponame/branch/foldername/icon.svg" alt=”icon | LinkedIn” width=”21px”/></a>
+[My Linkedin](https://www.linkedin.com/in/luke-schula-480548169/)
+[My GitHub](https://github.com/lukeschula)
 
 
 ## Project Requirements
