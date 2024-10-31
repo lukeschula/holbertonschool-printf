@@ -3,7 +3,7 @@
 Welcome to the my repository! In here contains a project recreating the printf function without case or switch statements.This project was done trimester 1 at Holberton School Tulsa, and the project was written using the C programming language.
 
 
-## Project Requirements 
+## Project Requirements
   - Compiler used to test code: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
   - Authorized functions and macros:
     - write (man 2 write)
@@ -25,22 +25,22 @@ Welcome to the my repository! In here contains a project recreating the printf f
   - Note that we will not provide the _putchar function for this project.
 
 ## Project Screenshots
-![Example 1](../images/Radius1.png)
-![Example 2](../images/Radius2.png)
+![Example 1](images/Radius1.png)
+![Example 2](images/Radius2.png)
 
 
 ## Context to project
- 
+
 ### File Description
   - main.h
     - The header file, used to declare function prototypes, macros, and data types that will be used across multiple source files.
-    - Provides a common set of declarations that can be used by all source files in the project. 
+    - Provides a common set of declarations that can be used by all source files in the project.
   - format_struct.c
     - This file defines a function named check_spec that checks if a given character is a valid format specifier for a custom printf-like function.
     - The function takes a pointer to a character (which is expected to be a format specifier like 'c', 's', '%', 'd', or 'i') and returns a function pointer to the appropriate function for handling that specifier.
   - printf.c
     - This file defines a function named _printf that is a simplified version of the standard printf function.
-    - The function takes a format string and a variable number of arguments, and it prints the arguments according to the format string. The function then  returns the number of characters printed. 
+    - The function takes a format string and a variable number of arguments, and it prints the arguments according to the format string. The function then  returns the number of characters printed.
   - spec_functions.c
     - This file holds three functions; print_char, print_pct, and print_str.
     - These functions are used in conjunction with the _printf function to handle specific format specifiers ('c', 's', & '%').
@@ -56,7 +56,7 @@ Welcome to the my repository! In here contains a project recreating the printf f
   - format_struct.c
     1. Declares an array called 'b' of 'form_t' structures.
     1. Function loops over the array. Each structure in the array checks for 'type' member matches the character pointed by '*format'.
-    1. If a match is found, it returns the 'f' member of the structure. 
+    1. If a match is found, it returns the 'f' member of the structure.
     1. If it doesnt match, return 'NULL'.
   - printf.c
     1. Intailizes a va_list named 'args'
@@ -74,7 +74,7 @@ Welcome to the my repository! In here contains a project recreating the printf f
     1. print_char: This function is called when the format specifier is '%c'. It takes a variable argument list (va_list) as input and retrieves the next argument of type 'int' from the list. It then prints the character corresponding to that argument using 'putcha'r. The function returns 1 to indicate that one character has been printed.
     1. print_pct: This function is called when the format specifier is '%%'. It takes a va_list as input, but it doesn't use it. It simply prints the '%' character using 'putchar' and returns 1 to indicate that one character has been printed.
     1. print_str: This function is called when the format specifier is '%s'. It takes a va_list as input and retrieves the next argument of type 'char*' from the list. It then iterates over the characters in the string and prints each character using 'putchar'. It keeps track of the number of characters printed in the 'count' variable and returns that count.
-  - dec_spec.c 
+  - dec_spec.c
     1. Inside the function, it retrieves the next argument of type 'int' from the va_list using the va_arg macro and assigns it to the variable 'x'.
     1. The function checks if 'x' is negative. If it is, it prints a minus sign (-) and assigns the absolute value of 'x' to the variable 'a'. It also increments the length variable by 1 to account for the minus sign.
     1. If 'x' is not negative, it assigns the value of 'x' to 'a' without any modifications.
